@@ -954,6 +954,11 @@ html.js .reveal.is-visible {
   transform: none;
 }
 
+/* With GSAP running, it drives the reveal, so CSS transitions would fight it */
+html.js.has-gsap .reveal {
+  transition: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html.js .reveal {
     opacity: 1;
